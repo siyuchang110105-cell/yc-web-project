@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phantom & Crimson Solitaire 古典油画展</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- 页面1：输入名字页 -->
+  <div class="page page-1 active" id="page1">
+    <img class="angel-statue" src="./assets/angel_statue.png" alt="天使雕像">
+    <div class="wrap">
+      <h1>无论你曾来自哪里，无论你是否曾对西方古典美学有所了解</h1>
+      <p>此刻，开启你的鉴赏之旅</p>
+      <div class="gold-label">准备好了吗？</div>
+      <input type="text" id="userNameInput" placeholder="输入你的名字">
+      <button id="goPage2Btn">确认进入</button>
+    </div><button id="skipToPage4_1">跳過，直達展區</button>
+
+  </div>
+
+  <!-- 页面2：欢迎文字页 -->
+  <div class="page page-2" id="page2">
+    <img class="angel-statue page2-angel" src="./assets/angel_statue.png" alt="天使雕像">
+    <img class="hands-left-deco" src="./assets/hands_left.png" alt="蓝色手部装饰">
+    <img class="circle-deco" src="./assets/circle_deco.png" alt="圆圈装饰">
+    <div class="wrap text-fade-up">
+      <p>欢迎，<span id="userNameReplace"></span>，你的名字很美<br>
+      在过去，无处不在的美渗入我们的生活中，<br>
+      而你有没有尝试过，将他们发觉感受？<br>
+      就如你的名字一样</p>
+      <button id="goPage3Btn">继续 →</button>
+      <button id="backToPage1_2">← 返回上一頁</button>
+      <button id="skipToPage4_2">跳過，直達展區</button>
+     </div>
+  </div>
+
+  <!-- 页面3：展览引言页 -->
+  <div class="page page-3" id="page3">
+    <div class="wrap text-fade-up">
+      <p>现在，跟随我们的脚步<br>
+      我们将要鉴赏1500年代十五世纪至1900年代前<br>
+      几幅著名神话故事油画作品<br>
+      此刻，从历史的洪流中打捞美学发展的千古一隅</p>
+      <button id="btnToPage4">继续观赏作品 →</button>
+    </div>
+    <button id="backToPage2_3">← 返回上一頁</button>
+    <button id="skipToPage4_3">跳過，直達展區</button>
+  </div>
+
+ <!-- 页面4：天主教油画展区主页 -->
+<div class="page page-4" id="page4">
+  <img class="p4-bg" src="./assets/page4_bg.jpg" alt="页面4暗红背景">
+  <img class="p4-banner-top" src="./assets/page4_top_banner.png" alt="顶部横幅">
+  <img class="p4-banner-bottom" src="./assets/page4_bottom_banner.png" alt="底部横幅">
+
+  <!-- 四個畫框 -->
+  <img class="p4-frame-fallen art-link-click" src="./assets/frame_fallen_full.png" alt="堕落天使画框" data-target="page5">
+  <img class="p4-frame-pray art-link-click" src="./assets/frame_pray_full.png" alt="祈祷圣母画框" data-target="page6">
+  <img class="p4-frame-adam art-link-click" src="./assets/frame_adam_full.png" alt="创造亚当画框" data-target="page7">
+  <img class="p4-frame-crying art-link-click" src="./assets/frame_crying_full.png" alt="哭泣圣母画框" data-target="page8">
+
+  <!-- 三個標題文字png（哭泣聖母移除標題） -->
+  <img class="p4-text-fallen art-link-click" src="./assets/text_fallen_title.png" alt="堕落天使-1847" data-target="page5">
+  <img class="p4-text-pray art-link-click" src="./assets/text_pray_title.png" alt="祈祷圣母-1640" data-target="page6">
+  <img class="p4-text-adam art-link-click" src="./assets/text_adam_title.png" alt="创造亚当-1511" data-target="page7">
+
+  <!-- 主標題、底部提示 -->
+  <img class="p4-title-main" src="./assets/text_main_title.png" alt="天主教油画展区">
+  <img class="p4-title-prompt" src="./assets/text_prompt.png" alt="你想从哪幅画开始了解呢？">
+
+  <!-- 裝飾雕像、手部 -->
+  <img class="p4-deco-angel" src="./assets/angel_statue.png" alt="天使雕像">
+  <img class="p4-deco-hands" src="./assets/hands_left.png" alt="蓝色手部装饰">
+   
+ <button id="goPage9Btn" style="
+ position:absolute;
+ right:5%;
+ bottom:6%;
+ z-index:999;
+ padding:12px 26px;
+ font-size:15px;
+ color:#f5e6c8;
+ background:#5c3a3a;
+ border:1px solid #a07952;
+ border-radius:3px;
+ cursor:pointer;
+">瀏覽完畢，進入總結 →</button>
+
+
+</div>
+
+
+ <!-- 頁：墮落天使詳細介紹 page5 -->
+<div class="page page-fallen" id="page5">
+  <!-- 背景（和page4共用） -->
+  <img class="p4-bg" src="./assets/page4_bg.jpg" alt="背景">
+
+  <!-- 上下白色橫幅，動畫和第四頁一樣 -->
+  <img class="p4-banner-top" src="./assets/page4_top_banner.png" alt="顶部横幅">
+  <img class="p4-banner-bottom" src="./assets/page4_bottom_banner.png" alt="底部横幅">
+
+  <!-- 主畫作大畫框 -->
+  <div class="frame-main-fallen">
+    <img src="./assets/fallen_angel_1847.png" alt="墮落天使">
+  </div>
+
+  <!-- 左下角 眼睛特寫小畫框 + 對應文字 -->
+  <div class="frame-eye-fallen">
+    <img src="./assets/fallen_eye_detail.png" alt="眼睛特寫">
+  </div>
+  <div class="text-eye-fallen">
+    而這幅畫最著名的是<br>
+    這滴用概括手法畫出來的淚滴高光<br>
+    生動表達了人物的不甘情緒<br>
+    完美映襯了路西法高傲不屈的性格
+  </div>
+
+  <!-- 右側長方形細節畫框 -->
+  <div class="frame-side-fallen">
+    <img src="./assets/fallen_head_detail.png" alt="頭部細節">
+  </div>
+
+  <!-- 右邊大段介紹文字 -->
+  <div class="text-main-fallen">
+    《墮落天使》（法語：L'Ange déchu）<br>
+    是法國畫家亞歷山大·卡巴內爾的作品。<br>
+    這幅畫作於1847年完成，當時畫家年僅24歲，描繪的是被逐出天堂後的魔鬼路西法。該畫現收藏於法國蒙彼利埃的法布爾博物館。
+  </div>
+  //返回以及收藏按钮//
+ <div class="detail-btn-group">
+  <button class="collect-btn" data-artname="墮落天使" data-year="1847">加入已瀏覽收藏夾</button>
+  <button class="back-btn" data-target="page4">返回畫作選擇</button>
+</div>
+
+  <!-- 页面6：祈祷圣母详情页 占位 -->
+  <div class="page page-6" id="page6">
+    <div class="wrap">
+      <h2>祈祷圣母 1640 详情页</h2>
+      <button class="back-btn" data-target="page4">← 返回油画展区</button>
+    </div>
+  </div>
+
+  <!-- 页面7：创造亚当详情页 占位 -->
+  <div class="page page-7" id="page7">
+    <div class="wrap">
+      <h2>创造亚当 1511 详情页</h2>
+      <button class="back-btn" data-target="page4">← 返回油画展区</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+ <!-- 最後結算頁 page9（佔位，之後補背景/動畫/文案） -->
+
+<div class="page page-summary" id="page9">
+  <div class="summary-wrap">
+    <h2>本次瀏覽總結</h2>
+    <p class="summary-text" id="summaryText"></p>
+    <button id="showSummaryBtn">生成瀏覽總結文案</button>
+    <button class="back-btn" data-target="page4">返回畫作選擇</button>
+  </div>
+</div>
